@@ -15,11 +15,16 @@ function logEvent(phase, elem) {
 }
 
 function handleClick(event) {
-  logEvent('capturing', event.currentTarget.className);
+  if (event.target === event.currentTarget) {
+    logEvent('capturing', event.currentTarget.className);
+    event.stopPropagation();
+  }
 }
 
 function handlePropagation(event) {
-  logEvent('bubbling', event.currentTarget.className);
+  if (event.target === event.currentTarget) {
+    logEvent('bubbling', event.currentTarget.className);
+  }
 }
 
 function attachHandlers() {
