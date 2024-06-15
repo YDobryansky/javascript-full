@@ -51,7 +51,8 @@ clearBtn.addEventListener('click', () => {
   eventsList.innerHTML = '';
 });
 
-removeHandlersBtn.addEventListener('click', removeHandlers);
+
 attachHandlersBtn.addEventListener('click', attachHandlers);
+removeHandlersBtn.addEventListener('click', removeHandlers);
 
 attachHandlers();
