@@ -1,4 +1,5 @@
 const checkboxElem = document.querySelector('.task-status');
 checkboxElem.addEventListener('change', () => {
-  console.log(checkboxElem.checked);
+  console.log(`Checked: ${checkboxElem.checked}`);
+  console.log(`Value: ${checkboxElem.value}`);
 });
