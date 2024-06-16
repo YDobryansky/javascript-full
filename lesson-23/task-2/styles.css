@@ -41,12 +41,13 @@ form {
     outline: none;
 }
 
-/* .form-input:invalid {
-    border: 3px solid red;
-} */
-.form-input.invalid {
+.form-input:invalid {
     border: 3px solid red;
 }
+
+/* .form-input.invalid {
+    border: 3px solid red;
+} */
 
 .submit-button {
     width: 100%;
