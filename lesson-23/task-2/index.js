@@ -1,8 +1,8 @@
 const formElem = document.querySelector('.login-form');
 const emailElem = document.querySelector('#email');
 const passwordElem = document.querySelector('#password');
-const emailErrorElem = document.querySelector('.error__text-email');
-const passwordErrorElem = document.querySelector('.error__text-password');
+const emailErrorElem = document.querySelector('.error-text_email');
+const passwordErrorElem = document.querySelector('.error-text_password');
 
 const validateEmail = () => {
   const emailValue = emailElem.value.trim();
@@ -11,7 +11,6 @@ const validateEmail = () => {
     message = 'Required';
   } else if (!emailValue.includes('@')) {
     message = 'Should be an email';
-    emailElem.addEventListener('input', validateEmail);
   }
   emailErrorElem.textContent = message;
   emailElem.classList.toggle('invalid', !!message);
@@ -36,7 +35,6 @@ const handleSubmit = event => {
 
   if (isEmailValid && isPasswordValid) {
     const formData = Object.fromEntries(new FormData(formElem));
-    formElem.reset();
     alert(JSON.stringify(formData));
   }
 };
