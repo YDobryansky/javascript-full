@@ -4,6 +4,11 @@ const passwordElem = document.querySelector('#password');
 const emailErrorElem = document.querySelector('.error-text_email');
 const passwordErrorElem = document.querySelector('.error-text_password');
 
+const showError = (inputElem, errorElem, message) => {
+  errorElem.textContent = message;
+  inputElem.classList.toggle('invalid', !!message);
+};
+
 const validateEmail = () => {
   const emailValue = emailElem.value.trim();
   let message = '';
@@ -12,8 +17,7 @@ const validateEmail = () => {
   } else if (!emailValue.includes('@')) {
     message = 'Should be an email';
   }
-  emailErrorElem.textContent = message;
-  emailElem.classList.toggle('invalid', !!message);
+  showError(emailElem, emailErrorElem, message);
   return !message;
 };
 
@@ -23,8 +27,7 @@ const validatePassword = () => {
   if (!passwordValue) {
     message = 'Required';
   }
-  passwordErrorElem.textContent = message;
-  passwordElem.classList.toggle('invalid', !!message);
+  showError(passwordElem, passwordErrorElem, message);
   return !message;
 };
 
