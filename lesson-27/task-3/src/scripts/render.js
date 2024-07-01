@@ -21,6 +21,7 @@ const createTaskElement = ({ text, done }) => {
 
 export const renderTasks = () => {
   const tasks = getTasks();
+
   const tasksElems = tasks.sort((a, b) => a.done - b.done).map(createTaskElement);
 
   listElem.innerHTML = '';
