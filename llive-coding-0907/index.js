@@ -13,7 +13,7 @@ function getTopStudent(students) {
   return {
     id: topStudent.id,
     firstName: topStudent.firstName,
-    lastName: topStudent.lastName,
+    lastName: topStudent.lastName
   };
 }
 

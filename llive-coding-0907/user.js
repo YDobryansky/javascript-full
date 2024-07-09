@@ -1,5 +1,5 @@
 export class User {
-  #isAdmin = false;
+  #isAdmin = false; 
 
   constructor(id, firstName, lastName) {
     this.id = id;
