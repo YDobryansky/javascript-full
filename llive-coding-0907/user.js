@@ -1,5 +1,5 @@
 export class User {
-  #isAdmin = false; 
+  #isAdmin = false;
 
   constructor(id, firstName, lastName) {
     this.id = id;
@@ -7,7 +7,7 @@ export class User {
     this.lastName = lastName;
   }
 
-  get getFullName() {
+  getFullName() {
     return `${this.firstName} ${this.lastName}`;
   }
 
