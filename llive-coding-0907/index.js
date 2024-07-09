@@ -2,20 +2,13 @@ import { User } from './user.js';
 import { Student } from './student.js';
 
 function getTopStudent(students) {
-  const topStudent = students
+  const { id, firstName, lastName } = students
     .filter(student => student.isActive)
-    .reduce((topStudent, currentStudent) => {
-      if (!topStudent || currentStudent.points > topStudent.points) {
-        return currentStudent;
-      }
-      return topStudent;
+    .reduce((prevStudent, currentStudent) => {
+      return currentStudent.points > prevStudent.points ? currentStudent : prevStudent;
     });
 
-  return {
-    id: topStudent.id,
-    firstName: topStudent.firstName,
-    lastName: topStudent.lastName,
-  };
+  return { id, firstName, lastName };
 }
 
 const students = [
