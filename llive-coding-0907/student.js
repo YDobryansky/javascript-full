@@ -1,7 +1,7 @@
 import { User } from './user.js';
 
 export class Student extends User {
-  #isActive = true; 
+  #isActive = true;
 
   constructor(id, firstName, lastName, group, points) {
     super(id, firstName, lastName);
@@ -9,11 +9,11 @@ export class Student extends User {
     this.points = points;
   }
 
-  getIsActive() {
+  get getIsActive() {
     return this.#isActive;
   }
 
-  setIsActive(isActive) {
+  set setIsActive(isActive) {
     this.#isActive = isActive;
   }
 }

@@ -7,15 +7,15 @@ export class User {
     this.lastName = lastName;
   }
 
-  getFullName() {
+  get getFullName() {
     return `${this.firstName} ${this.lastName}`;
   }
 
-  getIsAdmin() {
+  get getIsAdmin() {
     return this.#isAdmin;
   }
 
-  setIsAdmin(isAdmin) {
+  set setIsAdmin(isAdmin) {
     this.#isAdmin = isAdmin;
   }
 }
