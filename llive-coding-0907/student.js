@@ -9,11 +9,11 @@ class Student extends User {
     this.points = points;
   }
 
-  get isActive() {
+  get getIsActive() {
     return this.#isActive;
   }
 
-  set isActive(isActive) {
+  set setIsActive(isActive) {
     this.#isActive = isActive;
   }
 }
