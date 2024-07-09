@@ -8,11 +8,11 @@ export class Student extends User {
     this._isActive = true;
   }
 
-  get getIsActive() {
+  get isActive() {
     return this._isActive;
   }
 
-  set setIsActive(value) {
+  set isActive(value) {
     this._isActive = value;
   }
 }
