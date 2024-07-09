@@ -3,7 +3,7 @@ import { Student } from './student.js';
 
 function getTopStudent(students) {
   const { id, firstName, lastName } = students
-    .filter(student => student.isActive)
+    .filter(student => student.getIsActive)
     .reduce((prevStudent, currentStudent) => {
       return currentStudent.points > prevStudent.points ? currentStudent : prevStudent;
     });
