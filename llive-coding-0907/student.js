@@ -1,7 +1,7 @@
 import { User } from './user.js';
 
 class Student extends User {
-  #isActive = true; // Поле isActive за замовчуванням true
+  #isActive = true;
 
   constructor(id, firstName, lastName, group, points) {
     super(id, firstName, lastName);
