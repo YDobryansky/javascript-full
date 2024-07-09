@@ -1,7 +1,7 @@
 import { User } from './user.js';
 
-export class Student extends User {
-  #isActive = true;
+class Student extends User {
+  #isActive = true; // Поле isActive за замовчуванням true
 
   constructor(id, firstName, lastName, group, points) {
     super(id, firstName, lastName);
@@ -9,11 +9,13 @@ export class Student extends User {
     this.points = points;
   }
 
-  get getIsActive() {
+  get isActive() {
     return this.#isActive;
   }
 
-  set setIsActive(isActive) {
+  set isActive(isActive) {
     this.#isActive = isActive;
   }
 }
+
+export { Student };
